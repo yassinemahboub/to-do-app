@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* GLOBAL RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  background-color: #F4F4F5;
+}
+
+li {
+  list-style: none;
+}
+
+/* HEADER */
+
+header {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  
+}
+
+/* SIDE BAR */
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 256px;
+  background: linear-gradient(180deg, #151E58 0%, #2A387D 100%);
+  height: 100vh;
+  z-index: 2;
+
+}
+
+.tabs__content {
+display: none;
+}
+
+
+.tabs__content--active {
+  display: block;
+  }
+
+.tabs__button--active {
+  border-radius: 9px;
+  background: #4256D0;
+}
+
+
+
+.logo-container {
+  padding: 10px;
+  background: #0E1B6B;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  margin-top: 30px;
+  padding: 0 16px;
+}
+
+.first-nav {
+  margin-bottom: 30px;
+}
+
+.nav-title {
+  display: flex;
+  column-gap: 10px;
+  color: white;
+  font-size: 16px;
+  align-items: center;
+  font-weight: 300;
+  font-style: normal;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgb(244, 244, 245, 0.3);
+  margin-bottom: 16px;
+  padding-left: 14px;
+}
+
+.nav-title i {
+  font-size: 19px;
+}
+
+li {
+  margin-bottom: 5px;
+  color: white;
+  font-weight: 400;
+  display: flex;
+  column-gap: 15px;
+  cursor: pointer;
+  padding: 14px;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+li:hover {
+  border-radius: 9px;
+background: #4256D0;
+}
+
+li span {
+  margin-left: auto;
+  cursor: pointer;
+  height: 100%;
+  width: 10px;
+}
+
+#open-project-form-btn {
+  margin-bottom: 5px;
+  color: white;
+  font-weight: 400;
+  display: flex;
+  column-gap: 15px;
+  cursor: pointer;
+  padding: 14px;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+}
+
+#open-project-form-btn:hover {
+  background: rgb(255, 255, 255);
+  border-radius: 9px;
+  color: #0E1B6B;
+}
+
+#open-project-form-btn i {
+  font-size: 20px;
+}
+
+
+/* PROJECT INPUT */
+
+.project-input {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.3);
+  z-index: 50;
+  top: 0;
+  left: 0;
+}
+
+.project-input form {
+  width: 400px;
+  height: 210px;
+  background-color: white;
+  border-radius: 11px;
+  padding: 21px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-input form h4 {
+  font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  outline-color: #5C73DB;;
+ border: 1px solid rgb(0, 0, 0, 0.14);
+ font-size: 14px;
+}
+
+#add-project-btn {
+  border-radius: 10px;
+  background: #4763E4;
+  color: white;
+  padding: 16px;
+  border: none;
+  font-size: 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#add-project-btn:hover {
+  background: #6682ff;
+}
+
+#cancel-project-btn {
+  background: transparent;
+  color: gray/800;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #D4D4D8;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#cancel-project-btn:hover {
+  background: rgb(247, 248, 253);
+}
+
+.btn-wrapper {
+  display: flex;
+  column-gap: 15px;
+}
+
+/* MAIN */ 
+
+main {
+  margin-left: 281px;
+  padding: 35px;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+li.active {
+  border-radius: 9px;
+background: #4256D0;
+}
+
+.tab-header h3 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  
+}
+
+.tab-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+
+.tab-header #open-task-form-btn {
+border-radius: 10px;
+background: #4763E4;
+color: white;
+padding: 16px;
+display: flex;
+column-gap: 5px;
+align-items: center;
+cursor: pointer;
+transition: all 0.2s;
+font-size: 14px;
+} 
+
+.tab-header #open-task-form-btn:hover {
+  background: #2b4cdd;
+}
+
+#open-task-form-btn i {
+  font-size: 18px;
+}
+
+/* TASKS WRAPPER */
+
+.tasks-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+/* TASK ITEM */ 
+
+.task-item {
+  width: 100%;
+  display: flex;
+  height: 60px;
+  background-color: white;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 8px;
+}
+
+.task-item .action-wrapper {
+  margin-left: auto;
+}
+
+.action-wrapper {
+  display: flex;
+  column-gap: 15px;
+}
+
+.action-wrapper #modify-task-btn {
+  border: none;
+  background-color: transparent;
+  color: #2f4bca;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-wrapper #modify-task-btn:hover {
+  color: #0033ff;
+}
+
+.action-wrapper #delete-task-btn {
+  border: none;
+  background-color: transparent;
+  color: #DC2626;
+  font-size: 19px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-wrapper #delete-task-btn:hover {
+  color: #960000;
+}
+
+.task-item h5 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.checkbox-container input {
+  width: 18px;
+  height: 18px;
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.task-info span {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  padding: 3px 10px;
+}
+
+.task-info .low {
+  background-color: rgb(0, 0, 0, 0.05);
+  color: rgb(58, 58, 58)
+}
+
+.task-info .medium {
+  background-color: #FFEDD5;
+  color: #9A3412;
+}
+
+.task-info .high {
+  background-color: #DCFCE7;
+  color: #166534;
+}
+
+/* INPUT NEW TASK */
+
+.task-input {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.3);
+  z-index: 5;
+  top: 0;
+  left: 0;
+}
+
+.task-input form {
+  background-color: white;
+  padding: 25px;
+  border-radius: 12px;
+  width: 400px;
+}
+
+.task-input form h4 {
+  font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 20px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-bottom: 20px;
+}
+
+.input-wrapper label {
+  font-size: 14px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  outline-color: #5C73DB;;
+ border: 1px solid rgb(0, 0, 0, 0.14);
+ font-size: 14px;
+}
+
+#create-task-btn {
+  border-radius: 10px;
+  background: #4763E4;
+  color: white;
+  padding: 16px;
+  border: none;
+  font-size: 15px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#create-task-btn:hover {
+  background: #6682ff;
+}
+
+#cancel-task-btn {
+  background: transparent;
+  color: gray/800;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #D4D4D8;
+  width: 100%;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#cancel-task-btn:hover {
+  background: rgb(247, 248, 253);
+}
+
+textarea {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  outline-color: #5C73DB;;
+ border: 1px solid rgb(0, 0, 0, 0.14);
+ font-size: 14px;
+ resize: none;
+}
+
+select {
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  padding: 16px;
+  border-radius: 8px;
+  outline-color: #5C73DB;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  font-size: 14px;
+  appearance: none; /* Remove default arrow in modern browsers */
+  background-color: #f9f9f9; /* Background color */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E"); /* Custom arrow icon */
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+/* Style the dropdown arrow in IE */
+select::-ms-expand {
+  display: none;
+}
+
+/* Optional styling for the options */
+option {
+  font-size: 14px;
+}
+

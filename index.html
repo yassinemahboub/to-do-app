@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/style/style.css">
+    <script type="module" src="/main.js" defer></script>
+  </head>
+  <body>
+
+    <header>
+
+    </header>
+    
+    <aside>
+      <div class="logo-container"><img src="images/Dark.svg" alt="logo"></div>
+      <nav class="nav-bar">
+        <div class="first-nav">
+          <div class="nav-title">
+            <i class="fa-solid fa-house-user"></i>
+            <h2>Home</h2>
+          </div>
+          <ul>
+            <li data-for-tab="1" class="tabs__button tabs__button--active"><i class="fa-solid fa-inbox"></i>All Tasks</li>
+            <li data-for-tab="2" class="tabs__button"><i class="fa-solid fa-calendar-day"></i>Today</li>
+            <li data-for-tab="3" class="tabs__button"><i class="fa-solid fa-calendar-week"></i>Next 7 Days</li>
+            <li data-for-tab="4" class="tabs__button"><i class="fa-solid fa-flag-checkered"></i>Completed</li>
+          </ul>
+          
+        </div>
+
+        <div class="second-nav">
+          <div class="nav-title">
+            <i class="fa-solid fa-globe"></i>
+            <h2>Projects</h2>
+          </div>
+          <ul>
+            <li data-for-tab="5" class="tabs__button"><i class="fa-solid fa-folder-closed"></i>Spotify UI <span><i class="fa-regular fa-trash-can"></i></span></li>
+          </ul>
+          <button id="open-project-form-btn"><i class="fa-solid fa-plus"></i>Add Project</button>
+        </div>
+      </nav>
+    </aside>
+
+<main>
+  <div class="tabs-content">
+    <div class="tabs__content tabs__content--active"  data-tab="1">
+      <div class="tab-header">
+        <h3>All Tasks</h3>
+      </div>
+      
+      <div class="tasks-wrapper">
+
+        <div class="task-item">
+          <div class="task-info">
+            <div class="checkbox-container">
+              <input type="checkbox" id="task-checkbox">
+            </div>
+              <h5 id="task-title">Create the Front-end UI</h5>
+              <span>03/07/2023</span>
+              <span class="high">High</span>
+          </div>
+          
+            <div class="action-wrapper">
+              <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+      <div class="tabs__content"  data-tab="2">
+        <div class="tab-header">
+          <h3>Today</h3>
+        </div>
+        
+        <div class="tasks-wrapper">
+  
+          <div class="task-item">
+            <div class="task-info">
+              <div class="checkbox-container">
+                <input type="checkbox" id="task-checkbox">
+              </div>
+                <h5 id="task-title">Create the Front-end UI</h5>
+                <span>03/07/2023</span>
+                <span class="high">High</span>
+            </div>
+            
+              <div class="action-wrapper">
+                <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      
+        <div class="tabs__content"  data-tab="3">
+          <div class="tab-header">
+            <h3>Next 7 Days</h3>
+          </div>
+          
+          <div class="tasks-wrapper">
+    
+            <div class="task-item">
+              <div class="task-info">
+                <div class="checkbox-container">
+                  <input type="checkbox" id="task-checkbox">
+                </div>
+                  <h5 id="task-title">Create the Front-end UI</h5>
+                  <span>03/07/2023</span>
+                  <span class="high">High</span>
+              </div>
+              
+                <div class="action-wrapper">
+                  <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                  <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+
+          <div class="tabs__content" data-tab="4">
+            <div class="tab-header">
+              <h3>Completed</h3>
+            </div>
+            
+            <div class="tasks-wrapper">
+      
+              <div class="task-item">
+                <div class="task-info">
+                  <div class="checkbox-container">
+                    <input type="checkbox" id="task-checkbox">
+                  </div>
+                    <h5 id="task-title">Create the Front-end UI</h5>
+                    <span>03/07/2023</span>
+                    <span class="high">High</span>
+                </div>
+                
+                  <div class="action-wrapper">
+                    <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                    <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+
+    <div class="tabs__content" data-tab="5">
+      <div class="tab-header">
+        <h3>Spotify UI</h3>
+        <span id="open-task-form-btn"><i class="fa-solid fa-plus"></i>Add Task</span>
+      </div>
+      
+      <div class="tasks-wrapper">
+
+        <div class="task-item">
+          <div class="task-info">
+            <div class="checkbox-container">
+              <input type="checkbox" id="task-checkbox">
+            </div>
+              <h5 id="task-title">Create the Front-end UI</h5>
+              <span>03/07/2023</span>
+              <span class="high">High</span>
+          </div>
+          
+            <div class="action-wrapper">
+              <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+
+<!-- Popup Forms to Collect Inputs -->
+
+<div class="project-input">
+  <form action="" id="new-project">
+    <h4>Create a new project</h4>
+    <div class="input-wrapper">
+      <input type="text" id="project-name" placeholder="Enter Project Name" required>
+    </div>
+    <div class="btn-wrapper">
+      <button id="add-project-btn">Add</button>
+      <button type="button" id="cancel-project-btn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<div class="task-input">
+  <form action="" id="new-task">
+    <h4>Create a new Task</h4>
+
+    <div class="input-wrapper">
+      <label for="task-name-input">Title</label>
+      <input type="text" id="task-name-input" placeholder="Enter Task Name" required>
+    </div>
+
+    <div class="input-wrapper">
+      <label for="task-date-input">Due Date</label>
+      <input type="date" id="task-date-input" required>
+    </div>
+
+    <div class="input-wrapper">
+      <label for="task-desc-input">Descritpion</label>
+      <textarea type="text" id="task-desc-input" placeholder="Describe your task..."  rows="5" required></textarea>
+    </div>
+
+    <div class="input-wrapper">
+      <label>Select Priority:</label>
+      <select id="priority" name="priority" required>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+
+    <div class="btn-wrapper">
+      <button id="create-task-btn">Create</button>
+      <button type="button" id="cancel-task-btn">Cancel</button>
+    </div>
+
+  </form>
+</div>
+
+
+  </body>
+</html>
