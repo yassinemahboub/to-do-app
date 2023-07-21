@@ -355,22 +355,22 @@ font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  border-radius: 10px;
+  border-radius: 11px;
   border: 1px solid rgb(0, 0, 0, 0.1);
   padding: 3px 10px;
 }
 
-.task-info .low {
+.low {
   background-color: rgb(0, 0, 0, 0.05);
   color: rgb(58, 58, 58)
 }
 
-.task-info .medium {
+.medium {
   background-color: #FFEDD5;
   color: #9A3412;
 }
 
-.task-info .high {
+.high {
   background-color: #DCFCE7;
   color: #166534;
 }

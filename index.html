@@ -23,12 +23,14 @@
             <i class="fa-solid fa-house-user"></i>
             <h2>Home</h2>
           </div>
+          <!--These are the links to the different views of all tasks-->
           <ul>
-            <li data-for-tab="1" class="tabs__button tabs__button--active"><i class="fa-solid fa-inbox"></i>All Tasks</li>
+            <li data-for-tab="1" class="tabs__button tabs__button--active" ><i class="fa-solid fa-inbox"></i>All Tasks</li>
             <li data-for-tab="2" class="tabs__button"><i class="fa-solid fa-calendar-day"></i>Today</li>
             <li data-for-tab="3" class="tabs__button"><i class="fa-solid fa-calendar-week"></i>Next 7 Days</li>
             <li data-for-tab="4" class="tabs__button"><i class="fa-solid fa-flag-checkered"></i>Completed</li>
           </ul>
+          <!-- END: These are the links to the different views of all tasks-->
           
         </div>
 
@@ -37,9 +39,12 @@
             <i class="fa-solid fa-globe"></i>
             <h2>Projects</h2>
           </div>
-          <ul>
-            <li data-for-tab="5" class="tabs__button"><i class="fa-solid fa-folder-closed"></i>Spotify UI <span><i class="fa-regular fa-trash-can"></i></span></li>
+          <!--These are the links to the different projects objects-->
+          <ul id="all-projects-container">
+            <li data-for-tab="5" class="tabs__button"><i class="fa-solid fa-folder-closed"></i>Spotify UI<span><i class="fa-regular fa-trash-can"></i></span></li>
           </ul>
+          <!-- END: These are the links to the different projects objects-->
+
           <button id="open-project-form-btn"><i class="fa-solid fa-plus"></i>Add Project</button>
         </div>
       </nav>
@@ -50,25 +55,12 @@
     <div class="tabs__content tabs__content--active"  data-tab="1">
       <div class="tab-header">
         <h3>All Tasks</h3>
+        <span id="open-task-form-btn"><i class="fa-solid fa-plus"></i>Add Task</span>
       </div>
       
-      <div class="tasks-wrapper">
+      <div class="tasks-wrapper" id="all-tasks">
 
-        <div class="task-item">
-          <div class="task-info">
-            <div class="checkbox-container">
-              <input type="checkbox" id="task-checkbox">
-            </div>
-              <h5 id="task-title">Create the Front-end UI</h5>
-              <span>03/07/2023</span>
-              <span class="high">High</span>
-          </div>
-          
-            <div class="action-wrapper">
-              <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-              <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
-            </div>
-          </div>
+        
 
         </div>
       </div>
@@ -80,21 +72,7 @@
         
         <div class="tasks-wrapper">
   
-          <div class="task-item">
-            <div class="task-info">
-              <div class="checkbox-container">
-                <input type="checkbox" id="task-checkbox">
-              </div>
-                <h5 id="task-title">Create the Front-end UI</h5>
-                <span>03/07/2023</span>
-                <span class="high">High</span>
-            </div>
-            
-              <div class="action-wrapper">
-                <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
-              </div>
-            </div>
+          
   
           </div>
         </div>
@@ -106,21 +84,7 @@
           
           <div class="tasks-wrapper">
     
-            <div class="task-item">
-              <div class="task-info">
-                <div class="checkbox-container">
-                  <input type="checkbox" id="task-checkbox">
-                </div>
-                  <h5 id="task-title">Create the Front-end UI</h5>
-                  <span>03/07/2023</span>
-                  <span class="high">High</span>
-              </div>
-              
-                <div class="action-wrapper">
-                  <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                  <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
-                </div>
-              </div>
+            
     
             </div>
           </div>
@@ -132,46 +96,33 @@
             
             <div class="tasks-wrapper">
       
-              <div class="task-item">
-                <div class="task-info">
-                  <div class="checkbox-container">
-                    <input type="checkbox" id="task-checkbox">
-                  </div>
-                    <h5 id="task-title">Create the Front-end UI</h5>
-                    <span>03/07/2023</span>
-                    <span class="high">High</span>
-                </div>
-                
-                  <div class="action-wrapper">
-                    <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-                    <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
-                  </div>
-                </div>
+             
       
               </div>
             </div>
 
+        <!--Start Displaying new Tabs Content here. Dont see what's before that-->
     <div class="tabs__content" data-tab="5">
       <div class="tab-header">
         <h3>Spotify UI</h3>
         <span id="open-task-form-btn"><i class="fa-solid fa-plus"></i>Add Task</span>
       </div>
       
-      <div class="tasks-wrapper">
+      <div class="tasks-wrapper" id="Spotify">
 
         <div class="task-item">
           <div class="task-info">
             <div class="checkbox-container">
               <input type="checkbox" id="task-checkbox">
             </div>
-              <h5 id="task-title">Create the Front-end UI</h5>
-              <span>03/07/2023</span>
-              <span class="high">High</span>
+              <h5 id="task-title">Create the Front-end UI</h5> <!-- This task title -->
+              <span>03/07/2023</span> <!-- This the date -->
+              <span id="color-priority">High</span> <!-- This the priority -->
           </div>
           
             <div class="action-wrapper">
-              <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button>
-              <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button>
+              <button type="button" id="modify-task-btn"><i class="fa-solid fa-pen-to-square"></i></button> <!-- This is the edit button. It should open the initial task form to change the content -->
+              <button type="button" id="delete-task-btn"><i class="fa-solid fa-trash-can"></i></button> <!-- This is the button to delete completely the task from the project-->
             </div>
           </div>
 
@@ -183,7 +134,7 @@
 </main>
 
 
-<!-- Popup Forms to Collect Inputs -->
+<!-- Popup Form to Collect New Project Inputs -->
 
 <div class="project-input">
   <form action="" id="new-project">
@@ -197,6 +148,10 @@
     </div>
   </form>
 </div>
+
+<!-- END of Popup Form to Collect New Project Inputs -->
+
+<!-- Popup Form to Collect New Task Inputs -->
 
 <div class="task-input">
   <form action="" id="new-task">
@@ -233,6 +188,7 @@
 
   </form>
 </div>
+<!-- END of Popup Form to Collect New Task Inputs -->
 
 
   </body>
